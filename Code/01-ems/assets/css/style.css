@@ -1,0 +1,115 @@
+body {
+  background: #e0e0aa;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.group:after {
+  display: block;
+  clear: both;
+  content: '';
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.right, .left {
+  display: inline;
+}
+
+.content {
+  margin: 5% auto;
+  padding: 2.5%;
+  width: 85%;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  -ms-border-radius: 0.5em;
+  -o-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #fff;
+  font-size: 1.6rem; /* 16px base */ /* --------------- */
+}
+
+h1, h2, h3 {
+  margin: 1em 0 0.5em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2em; /* 32/16 */ /* --------------- */
+}
+
+h1:first-child {
+  margin-top: 0;
+}
+
+h1 time {
+  color: #bbbb90;
+  font-size: 0.5em; /* Half the headline size */ /* --------------- */
+}
+
+h3 {
+  font-size: 1.0625em; /* 17/16 */ /* --------------- */
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1em; /* 16px Base */ /* --------------- */
+}
+
+figcaption {
+  color: #ccc;
+  text-align: center;
+  font-size: 0.75em; /* 12/16 */ /* --------------- */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+article figure {
+  padding: 0 0 20px 20px;
+  max-width: 100px;
+}
+
+aside {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 900px) {
+  article {
+    display: inline;
+    float: left;
+    width: 65%;
+  }
+
+  aside {
+    display: inline;
+    float: right;
+    padding-left: 5%;
+    width: 30%;
+    font-size: 1.1rem; /* 11px base */ /* --------------- */
+  }
+}
+
+@media (min-width: 1200px) {
+  body {
+    font-size: 15px; /* Increase font size 1.5x */ /* --------------- */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
