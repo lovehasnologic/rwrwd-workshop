@@ -1,0 +1,28 @@
+.full, .half {
+  box-sizing: border-box;
+  background: #ccc;
+  padding: 10px;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.half .half,
+.half .full {
+  background: #aaa;
+}
+
+.percentages .full {
+  width: 100%;
+}
+
+.percentages .half {
+  width: 50%;
+}
+
+.vw .full {
+  width: 100vw;
+}
+
+.vw .half {
+  width: 50vw;
+}
