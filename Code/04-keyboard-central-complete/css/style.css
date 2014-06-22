@@ -228,7 +228,7 @@ li {
 // ----------------------------------------- */
 
 .hero {
-  height: 	50px;
+  height: 	50px; /* Thin strip hero for product page */
   background: url(../images/bg/hero.jpg);
   background-position: center center;
   background-size: cover;
@@ -236,7 +236,7 @@ li {
 }
 
 .hero--large {
-  height: 25vh;
+  height: 25vh; /* Large hero for text heading */
 }
 
 .hero__heading {
@@ -245,7 +245,7 @@ li {
   letter-spacing: 2px;
   font-weight: 700;
   font-size: 2.25rem;
-  line-height: 25vh;
+  line-height: 25vh; /* Match line-height to height of container to center single line text */
 }
 
 
@@ -376,11 +376,17 @@ li {
 /* ----- Product Image ----- */
 
 .productImage {
+  background: #333;
+  padding: 2px;
+  margin-bottom: 0.5em;
+}
 
+.productImage img {
+  display: block;
 }
 
 .product:hover .productImage {
-
+  background: #7b98c7;
 }
 
 /* --------------------------------------------
@@ -395,6 +401,7 @@ li {
 .description__title {
   font-weight: 900;
   font-size: 1.777777778em; /* 32 / 18 */
+  line-height: 1.2;
 }
 
 .description__subheading {
@@ -402,6 +409,7 @@ li {
   color: #7b98c7;
   font-weight: 900;
   font-size: 1.333333333em; /* 24 / 18 */
+  line-height: 1.2;
 }
 
 .description__title + .description__subheading {
@@ -441,7 +449,7 @@ li {
 /* ----- Product Specs Container ----- */
 
 .productSpecs {
-
+  background: #ebf0f7;
 }
 
 /* --------------------------------------------
@@ -570,25 +578,65 @@ li {
 
 @media (max-width: 500px) {
   .l--3up {
+    padding: 6%;
   }
 
   .l--3up .l--module {
     float: none;
-    margin: 0 0 2%; /* 1 column */
+    margin: 0 0 15px; /* 1 column */
     width: 100%;
   }
-}
 
-@media (max-height: 500px) {
-  .hero--large {
+  .brand,
+  .mainNav__list {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+
+  .mainNav__item:last-child .mainNav__link {
+    padding-right: 1em;
+  }
+
+  .hero--large { /* Same change as max-height MQ */
     padding: 10px;
     height: auto;
   }
 
-  .hero__heading {
+  .hero__heading { /* Same change as max-height MQ */
+    letter-spacing: 0;
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+
+  .description {
+    font-size: 1rem; /* 16 / 16 base */
+  }
+
+  .details {
+    margin: 1em 0 2em !important;
+  }
+
+  .details__list {
+    list-style-type: none;
+  }
+}
+
+@media (min-width: 1400px) {
+  html {
+    font-size: 18px; /* Increase global page font size */
+  }
+}
+
+@media (max-height: 500px) {
+  .hero--large { /* Same change as narrow width MQ */
+    padding: 10px;
+    height: auto;
+  }
+
+  .hero__heading { /* Same change as narrow-width MQ */
     letter-spacing: 0;
     font-size: 1.8rem;
     line-height: 1;
   }
 }
-
