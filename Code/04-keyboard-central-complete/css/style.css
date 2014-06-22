@@ -1,0 +1,594 @@
+/* -----------------------------------------------------------------------------
+// Table of Contents
+//
+//  - Colors
+//  - Webfonts
+//  - Reset
+//  - Scaffolding
+//  - Typography
+//  - Header & Hero
+//  - Nav, Logo & Breadcrumbs
+//  - Products
+//  - Description
+//  - Details & Specs
+//  - Footer
+//  - Media Queries
+//
+// -------------------------------------------------------------------------- */
+
+/* --------------------------------------------
+// -- Colors
+//
+// Black:       #333
+// Blue:        #7b98c7
+// Blue Tint:   #ebf0f7
+// Light Gray:  #ccc
+// Dark Gray:   #999
+// Red:         #c74040
+//
+// ----------------------------------------- */
+
+/* --------------------------------------------
+// !-- Webfonts
+// ----------------------------------------- */
+
+@font-face {
+  font-weight: normal;
+  font-style: normal;
+  font-family: 'geometry';
+  src: url('../fonts/geometry.eot');
+  src: url('../fonts/geometry.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/geometry.woff') format('woff'),
+       url('../fonts/geometry.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'source-sans';
+  src: url('../fonts/sourcesanspro-regular.eot');
+  src: url('../fonts/sourcesanspro-regular.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesanspro-regular.woff') format('woff'),
+       url('../fonts/sourcesanspro-regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 400;
+  font-style: italic;
+  font-family: 'source-sans';
+  src: url('../fonts/sourcesanspro-it.eot');
+  src: url('../fonts/sourcesanspro-it.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesanspro-it.woff') format('woff'),
+       url('../fonts/sourcesanspro-it.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 900;
+  font-style: normal;
+  font-family: 'source-sans';
+  src: url('../fonts/sourcesanspro-black.eot');
+  src: url('../fonts/sourcesanspro-black.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesanspro-black.woff') format('woff'),
+       url('../fonts/sourcesanspro-black.ttf') format('truetype');
+}
+
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'source-sans';
+  src: url('../fonts/sourcesanspro-light.eot');
+  src: url('../fonts/sourcesanspro-light.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/sourcesanspro-light.woff') format('woff'),
+       url('../fonts/sourcesanspro-light.ttf') format('truetype');
+}
+
+/* --------------------------------------------
+// !-- Reset
+// ----------------------------------------- */
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: inherit;
+  font-size: 100%;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  color: #333;
+  font-family: 'source-sans', Helvetica, Arial, sans-serif;
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.group:after {
+  display: table;
+  clear: both;
+  content: '';
+}
+
+img {
+  max-width: 100%;
+  height: auto !important; /* IE 8 */
+}
+
+/* --------------------------------------------
+// !-- Scaffolding
+// ----------------------------------------- */
+
+/* ----- 3 Columns ----- */
+
+.l--3up {
+  padding: 2%; /* 20px / 1000px */
+}
+
+.l--3up .l--module {
+  display: block;
+  float: left;
+  margin: 2.083333333%; /* 20px / 960px (1000px - margin) */
+  width: 29.166666667%; /* 280px / 960px (1000px - margin) */
+}
+
+.l--3up .l--module:nth-child(3n + 1) {
+  clear: left;
+}
+
+/* ----- Main/Rail Modules ----- */
+
+.l--main {
+  width: 60vw;
+}
+
+.l--rail {
+  width: 28vw;
+}
+
+/* ----- Left Rail ----- */
+
+.l--leftRail,
+.l--rightRail {
+  margin: 4vw;
+}
+
+.l--leftRail .l--main {
+  float: right;
+}
+
+.l--leftRail .l--rail {
+  float: left;
+}
+
+/* ----- Right Rail ----- */
+
+.l--rightRail .l--main {
+  float: left;
+}
+
+.l--rightRail .l--rail {
+  float: right;
+}
+
+/* --------------------------------------------
+// !-- Typography
+// ----------------------------------------- */
+
+p,
+li {
+  font-size: 1em;
+}
+
+/* --------------------------------------------
+// !-- Header & Hero
+// ----------------------------------------- */
+
+.hero {
+  height: 	50px;
+  background: url(../images/bg/hero.jpg);
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+}
+
+.hero--large {
+  height: 25vh;
+}
+
+.hero__heading {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 25vh;
+}
+
+
+/* --------------------------------------------
+// !-- Nav, Logo & Breadcrumbs
+// ----------------------------------------- */
+
+/* ----- Logo ----- */
+
+.brand {
+  float: left;
+  padding-top: 0.1em;
+  font-size: 1.777777778em; /* 32 / 18 */
+  font-family: 'geometry';
+}
+
+.brand__keyboard {
+  color: #fff;
+}
+
+.brand__central {
+  color: #7b98c7;
+}
+
+/* ----- Bar ----- */
+
+.mainNav {
+  padding: 0 4%; /* 40/1000 */
+  background: #333;
+}
+
+/* ----- Navigation ----- */
+
+.mainNav__list {
+  float: right;
+}
+
+.mainNav__item {
+  display: inline-block;
+}
+
+.mainNav__link {
+  display: block;
+  padding: 0.5em 1em;
+  color: #fff;
+  text-decoration: none;
+}
+
+.mainNav__link:hover,
+.mainNav__link:focus {
+  color: #7b98c7;
+}
+
+.mainNav__item:last-child .mainNav__link {
+  padding-right: 0;
+}
+
+/* ----- Breadcrumbs ----- */
+
+.breadcrumbs {
+  padding: 0 4%; /* 40/1000 */
+  background: #ccc;
+}
+
+.breadcrumbs__list {
+  color: #999;
+  font-weight: 400;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  padding: 0.5em 0;
+}
+
+.breadcrumbs__link {
+  color: #999;
+  text-decoration: none;
+}
+
+.breadcrumbs__link:hover,
+.breadcrumbs__link:focus {
+  color: #333;
+}
+
+.breadcrumbs__link:after {
+  margin: 0 0.75em 0 1em;
+  content: '\00BB';
+  pointer-events: none;
+}
+
+.breadcrumbs__link:focus:after,
+.breadcrumbs__link:hover:after {
+  color: #999;
+}
+
+/* --------------------------------------------
+// !-- Products
+// ----------------------------------------- */
+
+/* ----- Products Container ----- */
+
+.products {
+
+}
+
+/* ----- Product Link ----- */
+
+.product {
+  color: #333;
+  text-decoration: none;
+}
+
+.product:hover,
+.product:focus {
+  color: #c74040;
+}
+
+.product__name {
+  font-size: 1em;
+}
+
+.product__brand {
+  color: #7b98c7;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* ----- Product Image ----- */
+
+.productImage {
+
+}
+
+.product:hover .productImage {
+
+}
+
+/* --------------------------------------------
+// !-- Description
+// ----------------------------------------- */
+
+.description {
+  font-size: 1.125rem; /* 18 / 16 base */
+  line-height: 1.5; /* 27/18 */
+}
+
+.description__title {
+  font-weight: 900;
+  font-size: 1.777777778em; /* 32 / 18 */
+}
+
+.description__subheading {
+  margin: 1em 0 0;
+  color: #7b98c7;
+  font-weight: 900;
+  font-size: 1.333333333em; /* 24 / 18 */
+}
+
+.description__title + .description__subheading {
+  margin-top: 0.25em;
+}
+
+.description p {
+  margin: 0 0 0.5em;
+}
+
+/* --------------------------------------------
+// !-- Details & Specs
+// ----------------------------------------- */
+
+.details {
+  margin-bottom: 2em;
+  line-height: 1.3;
+}
+
+.details__heading {
+  margin-bottom: 0.25em;
+  color: #7b98c7;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1em;
+}
+
+.details__list {
+  list-style-type: disc;
+}
+
+.details__item {
+  margin-bottom: 0.5em;
+  font-size: 1em;
+}
+
+/* ----- Product Specs Container ----- */
+
+.productSpecs {
+
+}
+
+/* --------------------------------------------
+// !-- Footer
+// ----------------------------------------- */
+
+.pageFooter {
+  position: relative;
+  background: #333;
+  color: #ccc;
+  line-height: 1.384615385; /* 18/13 */
+}
+
+.pageFooter:after {
+  position: absolute;
+  top: -90px;
+  left: 20px;
+  z-index: 1;
+  color: rgba(255,255,255,0.2);
+  content: 'K';
+  font-size: 196px;
+  font-family: 'geometry';
+}
+
+.pageFooter__column {
+  position: relative;
+  z-index: 2;
+}
+
+/* ----- Footer Text ----- */
+
+.pageFooter__heading {
+  margin: 2em 0 1em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 1em;
+}
+
+.pageFooter__heading:first-child {
+  margin-top: 0;
+}
+
+.pageFooter p,
+.pageFooter address,
+.pageFooter li {
+  font-size: 1em;
+}
+
+.pageFooter li {
+
+}
+
+.pageFooter a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.pageFooter a:hover,
+.pageFooter a:focus {
+  color: #fff;
+}
+
+/* ----- Workshop ----- */
+
+.pageFooter__workshop {
+  padding: 2em 25%;
+  background: #000;
+  text-align: center;
+}
+
+.pageFooter__workshop p {
+
+}
+
+.pageFooter__workshop em {
+  color: #fff;
+  font-style: italic;
+}
+
+.pageFooter__workshop a {
+  color: #fff;
+}
+
+.pageFooter__workshop a:hover,
+.pageFooter__workshop a:focus {
+  color: #7b98c7;
+}
+
+/* --------------------------------------------
+// !-- Media Queries
+// ----------------------------------------- */
+
+@media (max-width: 750px) {
+  .l--3up .l--module {
+    margin: 3%;
+    width: 44%;
+  }
+
+  .l--3up .l--module:nth-child(3n + 1) { /* Clear 3 column */
+    clear: none;
+  }
+
+  .l--3up .l--module:nth-child(2n + 1) {/* Clear 2 column */
+    clear: left;
+  }
+
+  .pageFooter__links {
+    width: 94% !important; /* Override Grid Structure */
+  }
+
+  .pageFooter__links li {
+    display: inline-block;
+    padding: 0 1em 1em 0;
+  }
+
+  .l--leftRail, .l--rightRail {
+    margin: 6vw;
+  }
+
+  .l--main, .l--rail {
+    width: 88vw;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .l--3up {
+  }
+
+  .l--3up .l--module {
+    float: none;
+    margin: 0 0 2%; /* 1 column */
+    width: 100%;
+  }
+}
+
+@media (max-height: 500px) {
+  .hero--large {
+    padding: 10px;
+    height: auto;
+  }
+
+  .hero__heading {
+    letter-spacing: 0;
+    font-size: 1.8rem;
+    line-height: 1;
+  }
+}
+
