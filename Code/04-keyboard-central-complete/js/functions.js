@@ -20,19 +20,17 @@ var responsiveRebuild = function(targetItem, smallPlacement, largePlacement, tar
 
 $(document).ready(function(){
 
-/*   responsiveRebuild('.js--responsiveProductImage', '.description', '.details', 750); */
+  responsiveRebuild('.js--responsiveProductImage', '.description', '.l--rail .details', 750);
 
 });
 
 $(window).bind("resize", function(){
 
-  /*
-var responsiveTimeoutFunction = null;
+  var responsiveTimeoutFunction = null;
   clearTimeout(responsiveTimeoutFunction);
   responsiveTimeoutFunction = setTimeout(function(){
-    responsiveRebuild('.js--responsiveProductImage', '.description', '.details', 750);
+    responsiveRebuild('.js--responsiveProductImage', '.description', '.l--rail .details', 750);
   },250);
-*/
 
 });
 
