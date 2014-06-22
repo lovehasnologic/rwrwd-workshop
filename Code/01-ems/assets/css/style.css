@@ -1,6 +1,9 @@
+html {
+  font-size: 10px;
+}
+
 body {
   background: #e0e0aa;
-  font-size: 10px;
   line-height: 1.4;
 }
 
@@ -91,13 +94,13 @@ aside {
     float: right;
     padding-left: 5%;
     width: 30%;
-    font-size: 1.1rem; /* 11px base */ /* --------------- */
+    font-size: 1.2rem; /* 11px base */ /* --------------- */
   }
 }
 
 @media (min-width: 1200px) {
-  body {
-    font-size: 15px; /* Increase font size 1.5x */ /* --------------- */
+  html {
+    font-size: 13px; /* Increase font size 1.3x */ /* --------------- */
   }
 }
 
